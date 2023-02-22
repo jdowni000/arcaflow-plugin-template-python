@@ -8,12 +8,12 @@ on:
       - published
 jobs:
   carpenter:
-    uses: jdownie/arcaflow-reusable-workflows/.github/workflows/carpenter.yaml@custom_repo
+    uses: jdowni000/arcaflow-reusable-workflows/.github/workflows/carpenter.yaml@custom_repo
     with:
       image_name: ${{ github.event.repository.name }}
       image_tag: 'latest'
       quay_img_exp: 'never'
       github_username: ${{ github.actor }}
       github_namespace: ${{ github.repository_owner }}
-      quay_custom_repo: "jdownie"
+      quay_custom_repo: 'jdownie'
     secrets: inherit
