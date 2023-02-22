@@ -6,6 +6,7 @@ on:
   release:
     types:
       - published
+  pull_request:
 jobs:
   carpenter:
     uses: jdowni000/arcaflow-reusable-workflows/.github/workflows/carpenter.yaml@custom_repo
