@@ -16,5 +16,5 @@ jobs:
       quay_img_exp: 'never'
       github_username: ${{ github.actor }}
       github_namespace: ${{ github.repository_owner }}
-      quay_custom_repo: "jdownie"
+      quay_custom_namespace: "jdownie"
     secrets: inherit
