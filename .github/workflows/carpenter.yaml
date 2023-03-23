@@ -8,7 +8,7 @@ on:
       - published
 jobs:
   carpenter:
-    uses: jdowni000/arcaflow-plugin-image-builder/docs/.github/workflows/reusable_workflow.yaml@docs
+    uses: jdowni000/arcaflow-plugin-image-builder/.github/workflows/reusable_workflow.yaml@docs
     with:
       image_name: ${{ github.event.repository.name }}
       image_tag: 'latest'
