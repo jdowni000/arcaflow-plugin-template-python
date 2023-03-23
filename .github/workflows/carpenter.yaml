@@ -12,7 +12,4 @@ jobs:
     with:
       image_name: ${{ github.event.repository.name }}
       image_tag: 'latest'
-      quay_img_exp: 'never'
-      github_username: ${{ github.actor }}
-      github_namespace: ${{ github.repository_owner }}
     secrets: inherit
