@@ -1,4 +1,4 @@
-name: Carpenter
+name: Arcaflow Container Toolkit
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       - published
 jobs:
   carpenter:
-    uses: arcalot/arcaflow-reusable-workflows/.github/workflows/carpenter.yaml@main
+    uses: arcalot/arcaflow-container-toolkit.github/workflows/reusable_workflow.yaml@main
     with:
       image_name: ${{ github.event.repository.name }}
       image_tag: 'latest'
