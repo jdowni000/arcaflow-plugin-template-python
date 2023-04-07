@@ -7,7 +7,7 @@ on:
     types:
       - published
 jobs:
-  carpenter:
+  act:
     uses: arcalot/arcaflow-container-toolkit.github/workflows/reusable_workflow.yaml@main
     with:
       image_name: ${{ github.event.repository.name }}
