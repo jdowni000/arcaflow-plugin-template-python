@@ -1,4 +1,4 @@
-name: Arcaflow CI
+name: Arcaflow CI Workflow
 on:
   push:
     branches:
