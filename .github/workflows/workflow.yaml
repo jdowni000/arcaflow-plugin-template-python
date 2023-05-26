@@ -19,6 +19,6 @@ jobs:
 
   docsgen:
     needs: act
-    uses: arcalot/arcaflow-docsgen/.github/workflows/reusable_workflow.yaml@main
+    uses: jdowni000/arcaflow-docsgen/.github/workflows/reusable_workflow.yaml@perms
     with:
       plugin_path: "arcaflow_plugin_template_python/arcaflow_plugin_template_python.py"
