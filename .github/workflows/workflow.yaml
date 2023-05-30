@@ -7,18 +7,18 @@ on:
     types:
       - published
 jobs:
-  act:
-    uses: arcalot/arcaflow-container-toolkit/.github/workflows/reusable_workflow.yaml@main
-    with:
-      image_name: ${{ github.event.repository.name }}
-      image_tag: 'latest'
-    secrets:
-      QUAY_NAMESPACE: ${{ secrets.QUAY_NAMESPACE }}
-      QUAY_USERNAME: ${{ secrets.QUAY_USERNAME }}
-      QUAY_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
+  # act:
+  #   uses: arcalot/arcaflow-container-toolkit/.github/workflows/reusable_workflow.yaml@main
+  #   with:
+  #     image_name: ${{ github.event.repository.name }}
+  #     image_tag: 'latest'
+  #   secrets:
+  #     QUAY_NAMESPACE: ${{ secrets.QUAY_NAMESPACE }}
+  #     QUAY_USERNAME: ${{ secrets.QUAY_USERNAME }}
+  #     QUAY_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
 
   docsgen:
-    needs: act
+    # needs: act
     uses: jdowni000/arcaflow-docsgen/.github/workflows/reusable_workflow.yaml@perms
     with:
       plugin_path: "arcaflow_plugin_template_python/arcaflow_plugin_template_python.py"
