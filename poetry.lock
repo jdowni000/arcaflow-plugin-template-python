@@ -2,13 +2,13 @@
 
 [[package]]
 name = "arcaflow-plugin-sdk"
-version = "0.10.1"
+version = "0.10.3"
 description = "Plugin SDK for Python for the Arcaflow workflow engine"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "arcaflow_plugin_sdk-0.10.1-py3-none-any.whl", hash = "sha256:ca55af6ab916ee1f7dfd9be7b332480161dac282db50fae0c713d33641a3b942"},
-    {file = "arcaflow_plugin_sdk-0.10.1.tar.gz", hash = "sha256:342af5fbb2647a570c8f459d97f10522393fe712a5f227d1003e72752d61e362"},
+    {file = "arcaflow_plugin_sdk-0.10.3-py3-none-any.whl", hash = "sha256:0c424f01ab2cd724a7a93aee0f16e9482b97716757e35e104e90d14d31019a66"},
+    {file = "arcaflow_plugin_sdk-0.10.3.tar.gz", hash = "sha256:04e68c3209f352a29346efdfa457be9774abf721cd8ebf511613a698d3c479a4"},
 ]
 
 [package.dependencies]
@@ -225,13 +225,13 @@ files = [
 
 [[package]]
 name = "docformatter"
-version = "1.7.1"
+version = "1.7.2"
 description = "Formats docstrings to follow PEP 257"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "docformatter-1.7.1-py3-none-any.whl", hash = "sha256:23ce0b5a540d14c420bb0f7ebef4299041a76d008ac92e50fe71937ca9e56c02"},
-    {file = "docformatter-1.7.1.tar.gz", hash = "sha256:34644db7d9781bde65a729c023940de26b61a39e3432eb35e9de3ddfe25d740a"},
+    {file = "docformatter-1.7.2-py3-none-any.whl", hash = "sha256:b59a4a07bdf0b474db6b6a9a0bbe123896676d86cd708552a2a6d6c2578ab6a4"},
+    {file = "docformatter-1.7.2.tar.gz", hash = "sha256:c20c53b27581a3c9ae9f1d951d4801ff8e6d2afd8c8ff489aae31877e31f0573"},
 ]
 
 [package.dependencies]
@@ -265,18 +265,18 @@ files = [
 
 [[package]]
 name = "platformdirs"
-version = "3.5.1"
+version = "3.7.0"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "platformdirs-3.5.1-py3-none-any.whl", hash = "sha256:e2378146f1964972c03c085bb5662ae80b2b8c06226c54b2ff4aa9483e8a13a5"},
-    {file = "platformdirs-3.5.1.tar.gz", hash = "sha256:412dae91f52a6f84830f39a8078cecd0e866cb72294a5c66808e74d5e88d251f"},
+    {file = "platformdirs-3.7.0-py3-none-any.whl", hash = "sha256:cfd065ba43133ff103ab3bd10aecb095c2a0035fcd1f07217c9376900d94ba07"},
+    {file = "platformdirs-3.7.0.tar.gz", hash = "sha256:87fbf6473e87c078d536980ba970a472422e94f17b752cfad17024c18876d481"},
 ]
 
 [package.extras]
-docs = ["furo (>=2023.3.27)", "proselint (>=0.13)", "sphinx (>=6.2.1)", "sphinx-autodoc-typehints (>=1.23,!=1.23.4)"]
-test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.3.1)", "pytest-cov (>=4)", "pytest-mock (>=3.10)"]
+docs = ["furo (>=2023.5.20)", "proselint (>=0.13)", "sphinx (>=7.0.1)", "sphinx-autodoc-typehints (>=1.23,!=1.23.4)"]
+test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.3.1)", "pytest-cov (>=4.1)", "pytest-mock (>=3.10)"]
 
 [[package]]
 name = "pydocstyle"
@@ -368,13 +368,13 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.6.0"
+version = "4.6.3"
 description = "Backported and Experimental Type Hints for Python 3.7+"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "typing_extensions-4.6.0-py3-none-any.whl", hash = "sha256:6ad00b63f849b7dcc313b70b6b304ed67b2b2963b3098a33efe18056b1a9a223"},
-    {file = "typing_extensions-4.6.0.tar.gz", hash = "sha256:ff6b238610c747e44c268aa4bb23c8c735d665a63726df3f9431ce707f2aa768"},
+    {file = "typing_extensions-4.6.3-py3-none-any.whl", hash = "sha256:88a4153d8505aabbb4e13aacb7c486c2b4a33ca3b3f807914a9b4c844c471c26"},
+    {file = "typing_extensions-4.6.3.tar.gz", hash = "sha256:d91d5919357fe7f681a9f2b5b4cb2a5f1ef0a1e9f59c4d8ff0d3491e05c0ffd5"},
 ]
 
 [[package]]
@@ -390,4 +390,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "eaf374f191bf60380f0ad8eb15cc1b1d3203e039f6726505e9ca2c688fdf4915"
+content-hash = "315f9e12a40e412f7830f02f0fbcac5fc78eb284b6e44213a71c43570afaf413"
