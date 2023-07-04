@@ -9,20 +9,23 @@ WORKDIR /app
 
 COPY poetry.lock /app/
 COPY pyproject.toml /app/
-COPY ${package}/ /app/${package}
 
-RUN python3.9 -m pip install poetry \
+RUN python3.9 -m pip install poetry==1.4.2 \
  && python3.9 -m poetry config virtualenvs.create false \
- && python3.9 -m poetry install --without dev \
+ && python3.9 -m poetry install --without dev --no-root \
  && python3.9 -m poetry export -f requirements.txt --output requirements.txt --without-hashes
 
 # run tests
-COPY tests /app/tests
+COPY ${package}/ /app/${package}
+COPY tests /app/${package}/tests
+
+ENV PYTHONPATH /app/${package}
+WORKDIR /app/${package}
 
 RUN mkdir /htmlcov
-RUN pip3 install coverage
-RUN python3 -m coverage run tests/test_arcaflow_plugin_template_python.py
-RUN python3 -m coverage html -d /htmlcov --omit=/usr/local/*
+RUN python3.9 -m pip install coverage==7.2.7 \
+ && python3.9 -m coverage run tests/test_${package}.py \
+ && python3.9 -m coverage html -d /htmlcov --omit=/usr/local/*
 
 
 # final image
@@ -42,7 +45,7 @@ RUN python3.9 -m pip install -r requirements.txt
 
 WORKDIR /app/${package}
 
-ENTRYPOINT ["python3", "arcaflow_plugin_template_python.py"]
+ENTRYPOINT ["python3.9", "arcaflow_plugin_template_python.py"]
 CMD []
 
 LABEL org.opencontainers.image.source="https://github.com/arcalot/arcaflow-plugin-template-python"
