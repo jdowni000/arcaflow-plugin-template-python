@@ -8,7 +8,7 @@ on:
       - published
 jobs:
   act:
-    uses: jdowni000/arcaflow-container-toolkit/.github/workflows/reusable_workflow.yaml@multi-arch
+    uses: jdowni000/arcaflow-container-toolkit/.github/workflows/reusable_workflow.yaml@main
     with:
       image_name: ${{ github.event.repository.name }}
       image_tag: 'latest'
@@ -26,4 +26,3 @@ jobs:
       pull-requests: write
     with:
       plugin_path: "arcaflow_plugin_template_python/arcaflow_plugin_template_python.py"
-
