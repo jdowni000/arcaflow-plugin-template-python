@@ -4,7 +4,7 @@ ARG package=arcaflow_plugin_template_python
 # STAGE 1 -- Build module dependencies and run tests
 # The 'poetry' and 'coverage' modules are installed and verson-controlled in the
 # quay.io/arcalot/arcaflow-plugin-baseimage-python-buildbase image to limit drift
-FROM quay.io/centos/centos:stream8 as build
+FROM quay.io/centos/centos:stream8@sha256:909526b11a24 as build
 RUN dnf -y module install python39 && dnf -y install python39 python39-pip
 ARG package
 
@@ -32,7 +32,7 @@ RUN python3.9 -m coverage run tests/test_${package}.py \
 
 
 # STAGE 2 -- Build final plugin image
-FROM quay.io/centos/centos:stream8
+FROM quay.io/centos/centos:stream8@sha256:909526b11a24
 RUN dnf -y module install python39 && dnf -y install python39 python39-pip
 ARG package
 
