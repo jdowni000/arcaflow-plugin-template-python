@@ -9,8 +9,8 @@ COPY poetry.lock /app/
 COPY pyproject.toml /app/
 
 # Convert the dependencies from poetry to a static requirements.txt file
-RUN python -m poetry install --without dev --no-root \
- && python -m poetry export -f requirements.txt --output requirements.txt --without-hashes
+RUN python -m poetry install --without dev --no-root
+RUN python -m poetry export -f requirements.txt --output requirements.txt --without-hashes
 
 COPY ${package}/ /app/${package}
 COPY tests /app/${package}/tests
