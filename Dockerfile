@@ -4,7 +4,9 @@ ARG package=arcaflow_plugin_template_python
 # STAGE 1 -- Build module dependencies and run tests
 # The 'poetry' and 'coverage' modules are installed and verson-controlled in the
 # quay.io/arcalot/arcaflow-plugin-baseimage-python-buildbase image to limit drift
-FROM quay.io/jdownie/arcaflow-plugin-baseimage-python-buildbase
+FROM quay.io/jdownie/arcaflow-plugin-baseimage-python-buildbase as build
+ARG package
+
 COPY poetry.lock /app/
 COPY pyproject.toml /app/
 
