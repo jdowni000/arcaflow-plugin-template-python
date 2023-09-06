@@ -3,7 +3,8 @@ ARG package=arcaflow_plugin_template_python
 # build poetry
 FROM quay.io/centos/centos:stream8 as build
 ARG package
-RUN dnf -y module install python39 && dnf -y install python39 python39-pip
+RUN dnf -y module install python39
+RUN dnf -y install python39 python39-pip
 
 WORKDIR /app
 
