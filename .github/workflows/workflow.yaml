@@ -20,7 +20,7 @@ jobs:
 
   docsgen:
     needs: act
-    uses: jdownie/arcaflow-docsgen/.github/workflows/reusable_workflow.yaml@dev
+    uses: arcalot/arcaflow-docsgen/.github/workflows/reusable_workflow.yaml@main
     permissions:
       contents: write
       pull-requests: write
