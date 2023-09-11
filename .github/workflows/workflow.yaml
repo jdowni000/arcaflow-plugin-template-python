@@ -12,6 +12,7 @@ jobs:
     with:
       image_name: ${{ github.event.repository.name }}
       image_tag: 'latest'
+      multi_arch: true
     secrets:
       QUAY_NAMESPACE: ${{ secrets.QUAY_NAMESPACE }}
       QUAY_USERNAME: ${{ secrets.QUAY_USERNAME }}
@@ -19,7 +20,7 @@ jobs:
 
   docsgen:
     needs: act
-    uses: arcalot/arcaflow-docsgen/.github/workflows/reusable_workflow.yaml@main
+    uses: jdownie/arcaflow-docsgen/.github/workflows/reusable_workflow.yaml@dev
     permissions:
       contents: write
       pull-requests: write
